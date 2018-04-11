@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
 function scaleVideoContainer() {
 
-    var height = $(window).height();
+    var height = $(window).height() + 5;
     var unitHeight = parseInt(height) + 'px';
     $('.homepage-hero-module').css('height',unitHeight);
 
@@ -49,13 +49,13 @@ function scaleBannerVideoSize(element){
 
         $(this).width(windowWidth);
 
-        // if(windowWidth < 1000){
+        if(windowWidth < 1800){
             videoHeight = windowHeight;
             videoWidth = videoHeight / videoAspectRatio;
             $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
 
             $(this).width(videoWidth).height(videoHeight);
-        // }
+        }
 
         $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 
