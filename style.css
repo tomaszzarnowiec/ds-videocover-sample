@@ -36,8 +36,8 @@ body{
 .video-container .hero h1 {
     color: #fff;
 }
-.video-container .poster.hidden {
-    display: none;
+.video-container .poster {
+    z-index: 1;
 }
 .video-container .poster img {
     width: 100%;
@@ -53,7 +53,7 @@ body{
 }
 .video-container video {
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     bottom: 0;
 }
 .video-container video.fillWidth {
